@@ -1,4 +1,4 @@
-var validator = require('../server/boot/validator.js');
+var validator = require('../validator.js');
 
 describe('validator', function() {
 

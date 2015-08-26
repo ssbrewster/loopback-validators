@@ -1,0 +1,18 @@
+{
+  "name": "loopback-validators",
+  "version": "0.0.1",
+  "scripts": {
+    "test": "./node_modules/.bin/istanbul cover node_modules/.bin/_mocha debug -- -R spec --ui bdd -r should",
+    "posttest": "./node_modules/.bin/istanbul check-coverage"
+  },
+  "dependencies": {
+    "bunyan": "^1.4.0",
+    "lodash.reduce": "^3.1.2",
+    "lodash.trim": "^3.0.1"
+  },
+  "devDependencies": {
+    "istanbul": "^0.3.14",
+    "mocha": "^2.2.5",
+    "should": "^6.0.3"
+  }
+}

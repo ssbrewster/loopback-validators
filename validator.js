@@ -5,7 +5,7 @@ var reduce = require('lodash.reduce'),
 function validator() {
 
     function validate(data, model) {
-        var modelToValidate = require('../../common/models/' + model + '.json');
+        var modelToValidate = require('./common/models/' + model + '.json');
 
         var error = {}, 
             fieldName, 
