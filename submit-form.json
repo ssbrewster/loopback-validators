@@ -1,0 +1,100 @@
+{
+  "name": "SubmitForm",
+  "plural": "SubmitForms",
+  "base": "Model",
+  "idInjection": true,
+  "options": {
+    "validateUpsert": true
+  },
+  "properties": {
+    "title": {
+      "type": "string"
+    },
+    "firstname": {
+      "type": "string",
+      "required": true,
+      "error": {
+        "empty": {
+          "status": 400,
+          "message": "Empty first name field"
+        }
+      }
+    },
+    "surname": {
+      "type": "string",
+      "required": true,
+      "error": {
+        "empty": {
+          "status": 400,
+          "message": "Empty surname field"
+        }
+      }
+    },
+    "addressNumber": {
+      "type": "string",
+      "required": false
+    }, 
+    "streetName": {
+      "type": "string",
+      "required":false 
+    },
+    "addressLine2": {
+      "type": "string"
+    },
+    "townCity": {
+      "type": "string"
+    },
+    "postcode": {
+      "type": "string",
+      "required": true,
+      "error": {
+        "empty": {
+          "status": 400,
+          "message": "Empty postcode field"
+        }
+      }
+    },
+    "emailAddress": {
+      "type": "string",
+      "required": true,
+      "error": {
+        "empty": {
+          "status": 400,
+          "message": "Empty email field"
+        },
+        "invalid": {
+          "status": 400,
+          "message": "Email address invalid"
+        }
+      }
+    },
+    "landline": {
+      "type": "string"
+    },
+    "mobile": {
+      "type": "string"
+    },
+    "dateOfEnquiry": {
+      "type": "date",
+      "required": false
+    },
+    "enquiryField": {
+      "type": "string",
+      "required": true,
+      "maxLength": 1500,
+      "error": {
+        "empty": {
+          "status": 400,
+          "message": "Empty enquiry field"
+        },
+        "maxlength": {
+          "status": 400,
+          "message": "Enquiry field exceeded maximum length"
+        }
+      }
+    }
+  },
+  "validations": [],
+  "acls": [],
+  "methods": []
+}
